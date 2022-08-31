@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- bootstrap css link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text-center text-uppercase fw-bold text-primary mt-3">Welcome to my phone hunter!</h1>
+    </header>
+    <main class="container">
+
+        <section class="mt-5">
+
+
+            <div class="w-50 mx-auto">
+                <div class="input-group mb-3">
+                    <input id="input-field" type="text" class="form-control" placeholder="Enter your phone name ...."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button id="search-btn" class="btn btn-outline-primary" type="button"
+                        id="button-addon2">Search</button>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+            </div>
+            <div class="mt-5 text-center d-none" id="not-found">
+                <h4 class="text-info">Nothing is found</h4>
+            </div>
+        </section>
+
+        <section id="loader" class="mt-5 d-flex justify-content-center d-none">
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+            </button>
+        </section>
+
+        <section class="mt-5 d-flex justify-content-center d-none" id="show-all-btn">
+            <button id="btn-show-all" class="btn btn-primary">Show All</button>
+        </section>
+
+
+        <section>
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="phoneDetailModal" tabindex="-1" aria-labelledby="phoneDetailModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="phoneDetailModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="model-body" class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- bootstrap js link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <!-- custom js link  -->
+
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>
